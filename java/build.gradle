@@ -12,7 +12,7 @@ repositories {
 
 application {
     mainClass = 'com.classycode.helloexample.Main'
-    applicationDefaultJvmArgs = ['-Djna.library.path=../native/JTouchID/dist']
+    applicationDefaultJvmArgs = ['-Djna.library.path=../native/JHello/dist']
 }
 
 dependencies {

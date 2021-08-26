@@ -1,3 +1,6 @@
 build/
 .idea/
 .gradle/
+.vs/
+Debug/
+Release/
