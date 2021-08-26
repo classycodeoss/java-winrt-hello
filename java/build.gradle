@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.classycode'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+application {
+    mainClass = 'com.classycode.helloexample.Main'
+    applicationDefaultJvmArgs = ['-Djna.library.path=../native/JTouchID/dist']
+}
+
+dependencies {
+    implementation 'net.java.dev.jna:jna:5.8.0'
+
+    // JNA platform for some useful Win32 mappings such as HWND
+    implementation 'net.java.dev.jna:jna-platform:5.8.0'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
